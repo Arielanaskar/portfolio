@@ -247,6 +247,11 @@ strong {
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
+.star-logo {
+  width: 25px;
+  margin-right: 10px;
+}
+
 #sticky-wrapper {
   position: fixed;
   top: 0;
