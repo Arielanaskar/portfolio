@@ -48,7 +48,7 @@ export default function Contact() {
               <hr />
               <p className="mt-5 text-white">
                 Made with by &hearts;{" "}
-                <a href="https://instagram.com/arilanaskar" target="blank">
+                <a href="https://instagram.com/arilanaskar_" target="blank">
                   Ariel anaskar
                 </a>
               </p>
