@@ -75,9 +75,12 @@ export default function Project() {
 
         <div className="projects-text-container">
           <motion.p variants={fadeIn("", "", 0.1, 1)} className="projects-text">
-            Selama di sekolah, saya telah menguasai berbagai bahasa
-            pemrograman, serta menguji keterampilan saya dengan menciptakan
-            beragam proyek web yang menarik dan fungsional, berikut dibawah ini merupakan proyek-proyek yang saya buat
+            Selama di sekolah, saya telah menguasai berbagai bahasa pemrograman,
+            serta menguji keterampilan saya dengan menciptakan beragam proyek
+            web yang menarik dan fungsional, berikut dibawah ini merupakan
+            contoh nyata dari proyek yang pernah saya buat.
+            Setiap proyek secara singkat dijelaskan dengan tautan ke repositori kode dan demo langsung di
+            dalamnya.
           </motion.p>
         </div>
 

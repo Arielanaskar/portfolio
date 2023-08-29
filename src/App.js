@@ -1,4 +1,4 @@
-import { Navbar, Hero, About, Project, Contact, ParticleBackground } from "./components"
+import { Navbar, Hero, About, Project, Contact, Footer, ParticleBackground } from "./components"
 
 function App() {
   return (
@@ -20,6 +20,9 @@ function App() {
 
         {/* Contact  */}
         <Contact />
+
+        {/* Footer  */}
+        <Footer />
 
         {/* ParticleBackGround  */}
         <ParticleBackground />

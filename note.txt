@@ -1,92 +1,150 @@
-<motion.div variants={textVariant()}>
-          <h2 className="title-contact sectionHeadText">Contact me.</h2>
-        </motion.div>
-        <div className="contact-wrapper">
-          <div class="social-links">
-            <a
-              href="#!"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="twitter"
-            >
-              <img src="/images/social-media/instagram.png" alt="" srcset="" />
-            </a>
-            <a
-              href="#!"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="instagram"
-            >
-              <img src="/images/social-media/facebook.png" alt="" srcset="" />
-            </a>
-            <a
-              href="#!"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="codepen"
-            >
-              <img src="/images/social-media/whatsapp.png" alt="" />
-            </a>
-            <a
-              href="#!"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="codepen"
-            >
-              <img src="/images/social-media/email.png" alt="" />
-            </a>
-            <a
-              href="#!"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="linkedin"
-            >
-              <img src="/images/github.png" alt="" />
-            </a>
+// import { UilEnvelopeEdit, UilArrowRight, UilWhatsapp, UilFacebook } from "@iconscout/react-unicons";
+
+{/* <h3 className="contact-title">Talk to Me</h3>
+
+          <div className="contact-info">
+            <div className="contact-card">
+              <UilEnvelopeEdit
+                size={"2rem"}
+                style={{ marginBottom: "0.25rem", color: "#f9f9f9" }}
+              />
+              <h3 className="contact-card-title">Email</h3>
+              <span className="contact-card-data">
+                arielanaskar95@gmail.com
+              </span>
+              <a
+                href="mailto:arielanaskar95@gmail.com"
+                className="contact-button"
+              >
+                Write Me <UilArrowRight size={"1.3rem"} />
+              </a>
+            </div>
+
+            <div className="contact-card">
+              <UilWhatsapp
+                size={"2rem"}
+                style={{ marginBottom: "0.25rem", color: "#f9f9f9" }}
+              />
+              <h3 className="contact-card-title">Whatsapp</h3>
+              <span className="contact-card-data">085697296936</span>
+              <a href="https://wa.me/6285697296936" className="contact-button">
+                Write Me <UilArrowRight size={"1.3rem"} />
+              </a>
+            </div>
+
+            <div className="contact-card">
+              <UilFacebook
+                size={"2rem"}
+                style={{ marginBottom: "0.25rem", color: "#f9f9f9" }}
+              />
+              <h3 className="contact-card-title">Facebook</h3>
+              <span className="contact-card-data">ariel.anaskar.95</span>
+              <a
+                href="https://web.facebook.com/ariel.anaskar.95"
+                className="contact-button"
+              >
+                Write Me <UilArrowRight size={"1.3rem"} />
+              </a>
+            </div>
+          </div> */}
+
+<div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="subscription_box text-center">
+              <p className="sectionSubText">Contact</p>
+              <h2>Get In Touch.</h2>
+              <div className="social-media">
+                <a href="https://instagram.com/arilanaskar" target="blank">
+                  <img
+                    src="/images/social-media/instagram.png"
+                    alt=""
+                    srcset=""
+                  />
+                </a>
+                <a
+                  href="https://web.facebook.com/ariel.anaskar.95"
+                  target="blank"
+                >
+                  <img
+                    src="/images/social-media/facebook.png"
+                    alt=""
+                    srcset=""
+                  />
+                </a>
+                <a href="https://wa.me/6285697296936" target="blank">
+                  <img
+                    src="/images/social-media/whatsapp.png"
+                    alt=""
+                    srcset=""
+                  />
+                </a>
+                <a
+                  href="mailto:arielanaskar95@gmail.com"
+                  target="blank"
+                >
+                  <img src="/images/social-media/email.png" alt="" srcset="" />
+                </a>
+                <a href="https://github.com/Arielanaskar/" target="blank">
+                  <img src="/images/github.png" alt="" srcset="" />
+                </a>
+              </div>
+              <hr />
+              <p className="mt-5 text-white">
+                Made with by &hearts;{" "}
+                <a href="https://instagram.com/arilanaskar_" target="blank">
+                  Ariel anaskar
+                </a>
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
+      .contact {
+  /* padding: 4.8rem 0; */
+  z-index: 999999;
+}
 
+.subscription_box {
+  /* border-radius: 20px; */
+  /* background: url(../public/images/banner2.png) no-repeat top; */
+  /* background-size: cover; */
+  /* background: radial-gradient(circle at 30% -100%, #042c54 25%, #042c54 85%, rgba(27, 120, 222, 1) 100%); */
+  /* background: #042c54; */
+  padding: 50px 0px;
+}
 
-        .title-contact {
-  background: linear-gradient(89.97deg, #ae67fa, #f49867);
+.subscription_box hr {
+  width: 40%;
+  border: 1.5px solid #f9f9f9;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.subscription_box h2 {
+  background: linear-gradient(89.97deg, #ae67fa, #ae67fa, #f49867, #f49867);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
 }
 
-.contact-wrapper {
-  margin-top: 3.2rem;
-  text-align: center;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.contact-wrapper-text {
-  margin-bottom: 2.5rem;
-}
-.contact-wrapper-text {
-  font-size: 2rem;
-}
-@media (max-width: 37.5em) {
-  .contact-wrapper-text {
-    font-size: 1rem;
-  }
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
+.social-media a img {
+  width: 30px;
+  height: 30px;
 }
-.social-links a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  margin: 1.6rem 1.6rem;
-  transition: all ease 0.2s;
-}
-.social-links a img {
-  transition: all ease-in-out 0.2s;
+
+.social-media a {
+  margin-top: 2.5rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0;
 }

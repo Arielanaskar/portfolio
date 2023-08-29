@@ -12,6 +12,41 @@ body {
   background: #040c18;
 }
 
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 #root {
   background: -moz-radial-gradient(
     circle at 3% 10%,
@@ -100,6 +135,15 @@ body {
   background: linear-gradient(to top, #ec008c, #fc6767);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gradient-2 {
+  background: linear-gradient(89.97deg, #ae67fa, #ae67fa, #f49867, #f49867);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  font-weight: 900;
 }
 
 /*---------------------------------------
@@ -544,6 +588,7 @@ strong {
 .project-description {
   font-size: 14px;
   margin-top: 0.5rem;
+  color: #888484;
 }
 
 .project-tag {
@@ -574,53 +619,268 @@ strong {
   CONTACT               
 -----------------------------------------*/
 
-.contact {
-  /* padding: 4.8rem 0; */
-  z-index: 999999;
+.gradient-bar {
+    width: 38px;
+    height: 3px;
+    background: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0.25rem;
 }
 
-.subscription_box {
-  /* border-radius: 20px; */
-  /* background: url(../public/images/banner2.png) no-repeat top; */
-  /* background-size: cover; */
-  /* background: radial-gradient(circle at 30% -100%, #042c54 25%, #042c54 85%, rgba(27, 120, 222, 1) 100%); */
-  /* background: #042c54; */
-  padding: 50px 0px;
+.button-contact {
+  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  background-color: #FF4820;
+  outline: none;
+  border: none;
 }
 
-.subscription_box hr {
-  width: 40%;
-  border: 1.5px solid #f9f9f9;
-  margin: auto;
-  margin-top: 30px;
+.button-contact-icon {
+  margin-left: 0.5rem;
 }
 
-.subscription_box h2 {
-  background: linear-gradient(89.97deg, #ae67fa, #ae67fa, #f49867, #f49867);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 50px;
-  font-weight: 700;
+.contact-earth {
+  position: relative;
 }
 
-.social-media {
-  display: flex;
+.astronout {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  bottom: 30%;
+  right: 35%;
+}
+
+.astronout img {
+  width: 150px;
+}
+
+#stars {
+  top: 10%;
+  position: absolute;
+}
+
+.stars {
+  animation: sparkle 1.6s infinite ease-in-out alternate;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.rocket {
+  top: 30%;
+  width: 80px;
+  position: absolute;
+}
+
+.contact-container {
+  grid-template-columns: repeat(2, max-content);
   justify-content: center;
   align-items: center;
+  column-gap: 6rem;
+  padding-bottom: 3rem;
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: auto 400px;
+  margin-top: 128px;
 }
 
-.social-media a img {
-  width: 30px;
-  height: 30px;
+.contact-title {
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+  color: #ffffff;
 }
 
-.social-media a {
-  margin-top: 2.5rem;
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  margin-bottom: 0;
+.contact-info {
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: 300px;
 }
+
+.contact-card {
+  border: 1px solid #888484;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.contact-card-title,
+.contact-card-data {
+  font-size: 0.875rem;
+  color: #888484;
+}
+
+.contact-card-title {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contact-card-data {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.contact-button {
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.25rem;
+  color: #888484;
+}
+
+.contact-form {
+  width: 360px;
+}
+
+.contact-form-div {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+
+.contact-form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid #042c54; */
+  background: #042c54;
+  outline: none;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  z-index: 1;
+  color: #ffffff;
+  border: none;
+}
+
+.contact-form-input::placeholder {
+  color: #cfcfcf;
+}
+
+.contact-form-tag {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  font-size: 0.813rem;
+  padding: 0.25rem;
+  z-index: 10;
+  color: #ffffff;
+  /* background-color: #040c18; */
+}
+
+.contact-form-area {
+  height: 11rem;
+}
+
+.contact-form-area textarea {
+  resize: none;
+}
+
+@media screen and (max-width: 992px) {
+  .content-container {
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*---------------------------------------
+  FOOTER             
+-----------------------------------------*/
+
+.footer-container{
+    padding: 2rem 0 6rem;
+}
+
+.footer-title, .footer-link{
+    color: #fff;
+}
+
+.footer-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+}  
+
+.footer-list{
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.footer-list li:nth-child(3) {
+  margin-right: 29px;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.footer-social-link{
+  padding: 0.4rem;
+  display: inline-flex;
+  background: #042c54;
+  border-radius: 0.5rem;
+}
+
+.footer-social-link img{
+  width: 1.25rem;
+}
+
+.footer-copy{
+    display: block;
+    margin-top: 4.5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-social-link{
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+  }
+}
+  
 
 /*---------------------------------------
   TECH ICON               
@@ -800,15 +1060,8 @@ strong {
   }
 
   .sectionHeadText,
-  .subscription_box h2 {
+  .gradient-2 {
     font-size: 30px;
-  }
-
-  .subscription_box hr {
-    width: 90%;
-    border: 1.5px solid #f9f9f9;
-    margin: auto;
-    margin-top: 30px;
   }
 
   .hero-col-image {
@@ -895,18 +1148,6 @@ strong {
 }
 
 @media screen and (max-width: 360px) {
-  .subscription_box hr {
-    width: 90%;
-    border: 1.5px solid #f9f9f9;
-    margin: auto;
-    margin-top: 30px;
-  }
-
-  .social-media a img {
-    width: 28px;
-    height: 28px;
-  }
-
   .about-text,
   .projects-text,
   .hero-text h4 {
@@ -921,11 +1162,8 @@ strong {
     font-size: 16px;
   }
 
-  .sectionHeadText {
-    font-size: 35px;
-  }
-
-  .subscription_box h2 {
+  .sectionHeadText, 
+  .gradient-2 {
     font-size: 35px;
   }
 

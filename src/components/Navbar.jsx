@@ -51,7 +51,7 @@ export default function Navbar() {
     <div id="sticky-wrapper">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a href="index.html" className="navbar-brand mx-lg-0">
+          <a href="/" className="navbar-brand mx-lg-0">
             <img src="/images/star.png" alt="" className="star-logo" />
             Portfolio.
           </a>

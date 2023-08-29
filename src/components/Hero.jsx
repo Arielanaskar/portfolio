@@ -38,7 +38,9 @@ export default function Hero() {
                 <p className="mb-4">
                   <a
                     className="custom-btn btn custom-link btn-cv"
-                    href="/file/ArielAnaskar.pdf" download="ArielAnaskar CV" type="pdf"
+                    href="/file/ArielAnaskar.pdf"
+                    download="ArielAnaskar CV"
+                    type="pdf"
                   >
                     Download CV &nbsp; &nbsp;
                     <FaDownload />

@@ -20,11 +20,11 @@ export default function About() {
             </motion.div>
 
             <motion.p variants={fadeIn("", "", 0.1, 1)} className="about-text">
-              Halo, Saya seorang pengembang web spesialis di laravel dan React Js 
-              Di situs ini, Anda akan menemukan koleksi
-              karya dan pengalaman yang memperlihatkan keterampilan dan keahlian
-              saya dalam menciptakan situs menarik secara visual dan ramah
-              pengguna. Saya seorang pembelajar cepat dan mudah bekerja sama dengan tim untuk
+              Halo, Saya seorang pengembang web spesialis di laravel dan React
+              Js Di situs ini, Anda akan menemukan koleksi karya dan pengalaman
+              yang memperlihatkan keterampilan dan keahlian saya dalam
+              menciptakan situs menarik secara visual dan ramah pengguna. Saya
+              seorang pembelajar cepat dan mudah bekerja sama dengan tim untuk
               solusi efisien, scalable, dan ramah pengguna. Dengan pengetahuan
               dan keahlian, saya siap membantu Anda mencapai tujuan. Terima
               kasih telah berkunjung, semoga Anda menikmati menjelajahi
