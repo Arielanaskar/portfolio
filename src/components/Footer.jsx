@@ -62,7 +62,7 @@ const Footer = () => {
             className="footer-social-link"
             target="blank"
           >
-            <img src="/images/social-media/instagram.png" alt="" srcset="" />
+            <img src="/images/social-media/instagram.png" alt="" />
           </a>
 
           <a
@@ -70,7 +70,7 @@ const Footer = () => {
             className="footer-social-link"
             target="blank"
           >
-            <img src="/images/github.png" alt="" srcset="" />
+            <img src="/images/github.png" alt="" />
           </a>
 
           <a
@@ -78,7 +78,7 @@ const Footer = () => {
             className="footer-social-link"
             target="blank"
           >
-            <img src="/images/social-media/facebook.png" alt="" srcset="" />
+            <img src="/images/social-media/facebook.png" alt="" />
           </a>
 
           <a
@@ -86,7 +86,7 @@ const Footer = () => {
             className="footer-social-link"
             target="blank"
           >
-            <img src="/images/social-media/whatsapp.png" alt="" srcset="" />
+            <img src="/images/social-media/whatsapp.png" alt="" />
           </a>
 
           <a
@@ -94,7 +94,7 @@ const Footer = () => {
             className="footer-social-link"
             target="blank"
           >
-            <img src="/images/social-media/email.png" alt="" srcset="" />
+            <img src="/images/social-media/email.png" alt="" />
           </a>
         </div>
         <span className="footer-copy">

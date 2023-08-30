@@ -1,7 +1,43 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { textVariant, staggerContainer, slideIn } from "../utils/motion";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_2ckyc41",
+        "template_07oks8k",
+        {
+          name: form.current.name.value,
+          email: form.current.email.value,
+          message: form.current.message.value,
+        },
+        "2LKegyMEjY0id5TuF"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          e.target.reset();
+        },
+        (error) => {
+          setLoading(false);
+
+          console.log(error);
+
+          alert("Something went wrong.");
+        }
+      );
+  };
+
   return (
     <motion.section
       variants={staggerContainer()}
@@ -25,7 +61,7 @@ export default function Contact() {
           className="contact-content"
           style={{ marginBottom: "-0px" }}
         >
-          <form className="contact-form">
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="gradient-bar"></div>
             <h3 className="contact-title">
               Say Hello <span className="wave">👋🏻</span>
@@ -50,7 +86,7 @@ export default function Contact() {
 
             <div className="contact-form-div contact-form-area">
               <textarea
-                name="project"
+                name="message"
                 cols="30"
                 rows="10"
                 className="contact-form-input"
@@ -60,9 +96,9 @@ export default function Contact() {
 
             <button className="button-contact">
               {" "}
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
               <svg
-                class="button-contact-icon"
+                className="button-contact-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -115,7 +151,7 @@ export default function Contact() {
               }}
               className="earth-animation"
             >
-              <img src="/images/earth.png" alt="" srcset="" width="100%" />
+              <img src="/images/earth.png" alt="" width="100%" />
             </motion.div>
             <motion.div
               animate={{
