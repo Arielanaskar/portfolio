@@ -48,32 +48,32 @@ body {
 }
 
 #root {
-  /* background: -moz-radial-gradient(
-    circle at 3% 10%,
+  background: -moz-radial-gradient(
+    circle at 5% 0%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  ); */
+  );
 
   /* safari 5.1+,chrome 10+ */
-  /* background: -webkit-radial-gradient(
-    circle at 3% 10%,
+  background: -webkit-radial-gradient(
+    circle at 5% 0%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  ); */
+  );
 
   /* opera 11.10+ */
-  /* background: -o-radial-gradient(
-    circle at 3% 10%,
+  background: -o-radial-gradient(
+    circle at 5% 0%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  ); */
+  );
 
   /* ie 10+ */
-  /* background: -ms-radial-gradient(
-    circle at 3% 10%,
+  background: -ms-radial-gradient(
+    circle at 5% 0%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  ); */
+  );
 
   /* global 92%+ browsers support */
   background: radial-gradient(
@@ -173,6 +173,7 @@ a {
 }
 
 .section-padding {
+  overflow: hidden;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -639,11 +640,17 @@ strong {
 }
 
 .button-contact-icon {
+  width: 24px;
+  height: 24px;
   margin-left: 0.5rem;
 }
 
 .contact-earth {
   position: relative;
+}
+
+.earth-animation {
+  height: 380px;
 }
 
 .astronout {
@@ -659,7 +666,7 @@ strong {
 }
 
 #stars {
-  top: 6%;
+  top: 10%;
   position: absolute;
 }
 
@@ -969,6 +976,10 @@ strong {
   RESPONSIVE STYLES               
 -----------------------------------------*/
 
+/* .kipak {
+  transform: ;
+} */
+
 @media screen and (min-width: 1600px) {
   .hero {
     padding-top: 380px;
@@ -1036,7 +1047,7 @@ strong {
 
 @media screen and (max-width: 480px) {
   .contact-form {
-    width: 350px;
+    width: 330px;
   }
 
   .contact-form-div {
@@ -1045,6 +1056,7 @@ strong {
 
   .contact-form-input {
     padding: 1rem;
+    font-size: 15px;
   }
 
   .contact-form-area {
@@ -1052,7 +1064,13 @@ strong {
   }
 
   .button-contact {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
+    font-size: 15px;
+  }
+
+  .button-contact-icon {
+    font-size: 20px;
+    font-size: 17px;
   }
 
   .section-padding {
@@ -1162,8 +1180,35 @@ strong {
 }
 
 @media screen and (max-width: 360px) {
+  #stars {
+    top: 12%;
+  }
+
   .contact-form {
-    width: 315px;
+    width: 300px;
+  }
+
+  .contact-form-div {
+    height: 3rem;
+  }
+
+  .contact-form-input {
+    padding: 1rem;
+    font-size: 13px;
+  }
+
+  .contact-form-area {
+    height: 8rem;
+  }
+
+  .button-contact {
+    padding: 1rem 1rem;
+    font-size: 13px;
+  }
+
+  .button-contact-icon {
+    width: 16px;
+    height: 16px;
   }
 
   .about-text,

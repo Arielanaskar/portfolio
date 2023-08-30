@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
-import { textVariant, staggerContainer } from "../utils/motion";
-import Earth from "./canvas/Earth";
+import { textVariant, staggerContainer, slideIn } from "../utils/motion";
 
 export default function Contact() {
-  const [ready, setReady] = useState(false);
-  const ref = useRef(<Earth/>);
-
-  useEffect(() => {
-    setReady(true);
-  }, [ref])
-
   return (
     <motion.section
       variants={staggerContainer()}
@@ -29,7 +20,11 @@ export default function Contact() {
       </motion.div>
 
       <div className="contact-container">
-        <div className="contact-content" style={{ marginBottom: "-0px" }}>
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="contact-content"
+          style={{ marginBottom: "-0px" }}
+        >
           <form className="contact-form">
             <div className="gradient-bar"></div>
             <h3 className="contact-title">
@@ -69,8 +64,6 @@ export default function Contact() {
               <svg
                 class="button-contact-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
               >
@@ -85,8 +78,11 @@ export default function Contact() {
               </svg>
             </button>
           </form>
-        </div>
-        <div className="contact-content">
+        </motion.div>
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className="contact-content"
+        >
           <div className="contact-earth">
             <svg
               id="stars"
@@ -101,7 +97,6 @@ export default function Contact() {
                 />
               </g>
             </svg>
-            {/* <Earth /> */}
             <motion.div
               animate={{
                 y: [-5, 10, -5],
@@ -118,15 +113,16 @@ export default function Contact() {
                 justifyContent: "center",
                 alignItems: "center",
               }}
+              className="earth-animation"
             >
-              <img src="/images/earth.png" alt="" srcset="" width="400" />
+              <img src="/images/earth.png" alt="" srcset="" width="100%" />
             </motion.div>
-            {/* <motion.div
+            <motion.div
               animate={{
-                y: [0, 20, 0],
+                rotate: ["20deg", "-20deg"],
               }}
               transition={{
-                duration: 7.5,
+                duration: 5,
                 repeat: Infinity,
                 repeatType: "reverse",
                 easings: "easeInOut",
@@ -134,10 +130,10 @@ export default function Contact() {
               className="astronout"
             >
               <img src="/images/astronout.png" alt="" />
-            </motion.div> */}
+            </motion.div>
             {/* <img src="/images/rocket.gif" alt="" srcset="" className="rocket" /> */}
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
