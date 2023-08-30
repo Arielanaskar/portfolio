@@ -1,39 +1,41 @@
-import React, { useMemo } from "react";
+import React, { useMemo, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Sphere } from "@react-three/drei";
+import { Sphere, OrbitControls, useProgress } from "@react-three/drei";
 import { TextureLoader } from "three";
+import CanvasLoader from "../Loader";
 
-const EarthSphere = ({ texture }) => {
+const EarthSphere = () => {
+  const texture = new TextureLoader().load("/images/earth.png"); 
   const earthRef = React.useRef();
-
-  const memoizedMaterial = useMemo(
-    () => <meshBasicMaterial map={texture} attach="material" />,
-    [texture]
-  );
-
-  useFrame(() => {
-    if (earthRef.current) {
-      earthRef.current.rotation.y += 0.01;
-    }
-  });
-
+  // const memoizedMaterial = useMemo(
+  //   () => <meshBasicMaterial map={texture} attach="material" />,
+  //   [texture]
+  // );
+  // useFrame(() => {
+  //   if (earthRef.current) {
+  //     earthRef.current.rotation.y += 0.01;
+  //   }
+  // });
   return (
     <Sphere args={[1, 32, 32]} scale={[1.5, 1.5, 1.5]} ref={earthRef}>
-      {memoizedMaterial}
-      {/* <meshBasicMaterial map={texture} attach="material" /> */}
+      <meshBasicMaterial map={texture} attach="material"/>
     </Sphere>
   );
 };
 
 const Earth = () => {
-  const texture = new TextureLoader().load("/images/earth2.jpg"); 
-
   return (
     <Canvas
       // camera={{ position: [0, 0, 1], fov: 45 }}
       style={{ height: "500px" }}
     >
-      <EarthSphere texture={texture} />
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          autoRotate
+          enableZoom={false}
+        />
+        <EarthSphere/>
+      </Suspense>
     </Canvas>
   );
 };

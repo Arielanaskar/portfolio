@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 import { textVariant, staggerContainer } from "../utils/motion";
 import Earth from "./canvas/Earth";
 
 export default function Contact() {
+  const [ready, setReady] = useState(false);
+  const ref = useRef(<Earth/>);
+
+  useEffect(() => {
+    setReady(true);
+  }, [ref])
+
   return (
     <motion.section
       variants={staggerContainer()}
@@ -93,8 +101,27 @@ export default function Contact() {
                 />
               </g>
             </svg>
-            <Earth />
+            {/* <Earth /> */}
             <motion.div
+              animate={{
+                y: [-5, 10, -5],
+              }}
+              transition={{
+                duration: 7.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                easings: "easeInOut",
+              }}
+              style={{
+                height: "450px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img src="/images/earth.png" alt="" srcset="" width="400" />
+            </motion.div>
+            {/* <motion.div
               animate={{
                 y: [0, 20, 0],
               }}
@@ -107,7 +134,7 @@ export default function Contact() {
               className="astronout"
             >
               <img src="/images/astronout.png" alt="" />
-            </motion.div>
+            </motion.div> */}
             {/* <img src="/images/rocket.gif" alt="" srcset="" className="rocket" /> */}
           </div>
         </div>

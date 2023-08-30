@@ -48,36 +48,36 @@ body {
 }
 
 #root {
-  background: -moz-radial-gradient(
+  /* background: -moz-radial-gradient(
     circle at 3% 10%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  );
+  ); */
 
   /* safari 5.1+,chrome 10+ */
-  background: -webkit-radial-gradient(
+  /* background: -webkit-radial-gradient(
     circle at 3% 10%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  );
+  ); */
 
   /* opera 11.10+ */
-  background: -o-radial-gradient(
+  /* background: -o-radial-gradient(
     circle at 3% 10%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  );
+  ); */
 
   /* ie 10+ */
-  background: -ms-radial-gradient(
+  /* background: -ms-radial-gradient(
     circle at 3% 10%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
-  );
+  ); */
 
   /* global 92%+ browsers support */
   background: radial-gradient(
-    circle at 3% 10%,
+    circle at 5% 0%,
     rgba(0, 40, 83, 1) 0%,
     rgba(4, 12, 24, 1) 15%
   );
@@ -659,7 +659,7 @@ strong {
 }
 
 #stars {
-  top: 10%;
+  top: 6%;
   position: absolute;
 }
 
@@ -674,12 +674,6 @@ strong {
   100% {
     opacity: 0.3;
   }
-}
-
-.rocket {
-  top: 30%;
-  width: 80px;
-  position: absolute;
 }
 
 .contact-container {
@@ -1041,6 +1035,26 @@ strong {
 }
 
 @media screen and (max-width: 480px) {
+  .contact-form {
+    width: 350px;
+  }
+
+  .contact-form-div {
+    height: 3.5rem;
+  }
+
+  .contact-form-input {
+    padding: 1rem;
+  }
+
+  .contact-form-area {
+    height: 10rem;
+  }
+
+  .button-contact {
+    padding: 1rem 1.5rem;
+  }
+
   .section-padding {
     padding-left: 5px;
     padding-right: 5px;
@@ -1148,6 +1162,10 @@ strong {
 }
 
 @media screen and (max-width: 360px) {
+  .contact-form {
+    width: 315px;
+  }
+
   .about-text,
   .projects-text,
   .hero-text h4 {
