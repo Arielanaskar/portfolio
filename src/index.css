@@ -531,8 +531,6 @@ strong {
   border-radius: 1rem;
   margin-top: 5rem;
   padding: 1.25rem;
-  /* box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.175),
-    -0.5rem -0.5rem rgba(0, 0, 0, 0.175); */
   background: #061325a1;
 }
 
@@ -781,7 +779,6 @@ strong {
   padding: 0.25rem;
   z-index: 10;
   color: #ffffff;
-  /* background-color: #040c18; */
 }
 
 .contact-form-area {
