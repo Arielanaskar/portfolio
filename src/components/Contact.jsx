@@ -167,7 +167,6 @@ export default function Contact() {
             >
               <img src="/images/astronout.png" alt="" />
             </motion.div>
-            {/* <img src="/images/rocket.gif" alt="" srcset="" className="rocket" /> */}
           </div>
         </motion.div>
       </div>
