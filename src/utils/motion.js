@@ -93,3 +93,5 @@ export const slideIn = (direction, type, delay, duration) => {
     },
   };
 };
+
+export const kipak = "kipak";
